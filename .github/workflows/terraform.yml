@@ -17,7 +17,7 @@ jobs:
       - name: Configure AWS credentials from Test account
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::534626805204:role/Github-Actions_Role
+          role-to-assume: arn:aws:iam::534626805204:role/GitHub-Actions_Role
           aws-region: us-east-1
         
       - name: Setup Terraform
