@@ -31,7 +31,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+    values = ["*ubuntu-focal-20.04-*"]
   }
 
   filter {
@@ -39,7 +39,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["amazon"] # Canonical
+  owners = ["679593333241"] # Canonical
 }
 
 resource "aws_instance" "web" {
