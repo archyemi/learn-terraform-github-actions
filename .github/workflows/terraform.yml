@@ -13,7 +13,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
+      
+      - name: Configure AWS credentials from Test account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::534626805204:role/Github-Actions_Role
+          aws-region: us-east-1
+        
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
