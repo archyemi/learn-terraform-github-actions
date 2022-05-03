@@ -75,5 +75,5 @@ resource "aws_security_group" "my-sg" {
 }
 
 output "web-address" {
-  value = "${aws_instance.web.public_dns}:8080"
+  value = "${aws_instance.test-instance.public_dns}:8080"
 }
