@@ -42,7 +42,7 @@ data "aws_ami" "ubuntu" {
   owners = ["679593333241"] # Canonical
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "test-instance" {
   ami                    = "ami-04505e74c0741db8d"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.my-sg.id]
